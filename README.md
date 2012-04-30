@@ -17,20 +17,6 @@ To add the Github remote path, adjust the following command to match your repo's
     git remote add origin git@github.com:GitHubUsername/YourRepoName.git
 
 
-### Prepare your .env file
-
-Remove all sensitive password and private information from your code and put into your own **.env** file. Search your code for the phrase 'process.env'. Where ever this is used it will contain a reference to your .env file. 
-
-### Create sample env.example file
-
-It would be nice to provide an example .env file for people looking at your code. 
-
-*   Create a copy of your .env file and name it env.example. 
-*   Open the new env.example file and replace the actual values with placeholders, for example
-
-
-    MONGOLAB_URI=YOUR_MONGO_LAB_CONNECTION_HERE
-
 ### Create a README file
 
 A Github repository can have a README file. This is the quick-guide, instruction manual for using the repo. You can create a README file with plain text or give some styles with [Markdown Syntax](http://daringfireball.net/projects/markdown/syntax)
@@ -48,8 +34,46 @@ Save your README file to your root directory (same level as web.js and package.j
     *   Any Heroku add-ons like MONGOLAB or CRON
 
 *   List your routes, what URLs are made available when your server is turned on.
+
+*   How can a person run your code, what is the command to start the server.
+
+-------
+
+### REMOVE SENSITIVE INFORMATION FROM CODE (RESET YOUR REPO)
+
+If you had any passwords in your code, you should remove them and place them in your .env file. For example in your .env file you have a MONGOLAB_URI variable
+    
+    MONGOLAB_URI=mongodb://.....
+    
+You can access this variable in your code with the statement (when using foreman start)
+
+    process.env.MONGOLAB_URI
+    
+Your .env file should be included in your .gitignore file
+
+### RESET THE REPO
+
+Once you have moved sensitive passwords out of your repo. You can reset your repo by removing the .git directory and reinitalizing the repo. In your code directory in terminal, remove the .git directory
+
+**You only need to do this if you have any passwords in your code (outside your .env file)**
+
+    rm -rf .git
+    
+Now you can re-initialize the repo knowing that your passwords will not be in the history. In your code directory in terminal.
+
+    git init
+    git add .
+    git commit -am "reinit"
+    git remote add heroku git@heroku.com:YOUR-HEROKU-APP.git
+    git remote add github git@github.com:GITHUB_USERNAME/GIT-REPO.git
     
 
-### Push your code repository to Github
+
+    
 
 
+### When finished - push your code repository to Github
+
+--force command will push
+
+    git push --force origin
