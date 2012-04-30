@@ -6,9 +6,16 @@ Part of your final assignment is to post your code on Github. This will allow an
 
 List of requirements for the Final project submission:
 
-### Create a Github Repository for your project. 
+### Create a Github Repository for your existing project. 
 
 You can find out how to create a repo, [http://help.github.com/create-a-repo/](http://help.github.com/create-a-repo/)
+
+When you have created a repo you can add a new Git remote path, allowing you to push your code to Github. We use remote paths now when we push to Heroku
+
+To add the Github remote path, adjust the following command to match your repo's address
+
+    git remote add origin git@github.com:GitHubUsername/YourRepoName.git
+
 
 ### Prepare your .env file
 
@@ -20,6 +27,7 @@ It would be nice to provide an example .env file for people looking at your code
 
 *   Create a copy of your .env file and name it env.example. 
 *   Open the new env.example file and replace the actual values with placeholders, for example
+
 
     MONGOLAB_URI=YOUR_MONGO_LAB_CONNECTION_HERE
 
@@ -41,3 +49,7 @@ Save your README file to your root directory (same level as web.js and package.j
 
 *   List your routes, what URLs are made available when your server is turned on.
     
+
+### Push your code repository to Github
+
+
