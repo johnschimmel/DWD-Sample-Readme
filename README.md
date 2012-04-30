@@ -2,13 +2,13 @@
 
 Part of your final assignment is to post your code on Github. This will allow anyone interested in learning NodeJS to use your code as an example while getting started.
 
-Here is a list of a requirements
+-----------------------
+
+List of requirements for the Final project submission:
 
 ### Create a Github Repository for your project. 
 
 You can find out how to create a repo, [http://help.github.com/create-a-repo/](http://help.github.com/create-a-repo/)
-
------------------------
 
 ### Prepare your .env file
 
