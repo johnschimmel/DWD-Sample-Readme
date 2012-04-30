@@ -57,6 +57,8 @@ Once you have moved sensitive passwords out of your repo. You can reset your rep
 
 **You only need to do this if you have any passwords in your code (outside your .env file)**
 
+**THIS WILL REMOVE ALL COMMIT HISTORY FROM YOUR REPO**
+
     rm -rf .git
     
 Now you can re-initialize the repo knowing that your passwords will not be in the history. In your code directory in terminal.
