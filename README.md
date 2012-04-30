@@ -64,6 +64,9 @@ Now you can re-initialize the repo knowing that your passwords will not be in th
     git init
     git add .
     git commit -am "reinit"
+
+Now add in the remote paths to PUSH to Heroku and Github, you must replace with your REPO information
+
     git remote add heroku git@heroku.com:YOUR-HEROKU-APP.git
     git remote add github git@github.com:GITHUB_USERNAME/GIT-REPO.git
     
@@ -76,4 +79,4 @@ Now you can re-initialize the repo knowing that your passwords will not be in th
 
 --force command will push
 
-    git push --force origin
+    git push --force github
