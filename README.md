@@ -8,7 +8,7 @@ Here is a list of a requirements
 
 You can find out how to create a repo, [http://help.github.com/create-a-repo/](http://help.github.com/create-a-repo/)
 
-
+-----------------------
 
 ### Prepare your .env file
 
